@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Dih-mQ-Y9O">
+            <objects>
+                <viewController id="zeL-2m-beP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M4T-fh-jde"/>
+                        <viewControllerLayoutGuide type="bottom" id="h2l-ea-B5e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jhM-AQ-tvV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9H-P8-xZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1213" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutME" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="600" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUj-2s-Wb8">
+                                <rect key="frame" x="20" y="33" width="46" height="30"/>
+                                <state key="normal" title="Menu"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="OpenMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18J-QC-nVa"/>
+                                </connections>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="center" semanticContentAttribute="forceLeftToRight" fixedFrame="YES" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="30" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-bk-kSw">
+                                <rect key="frame" x="0.0" y="25" width="300" height="67"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fEJ-Z3-eup" userLabel="DarkthemeContainer">
+                                        <rect key="frame" x="8" y="8" width="212" height="51"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dark Theme Slider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9R-fg-ceB">
+                                                <rect key="frame" x="0.0" y="0.0" width="212" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" alpha="0.94999999999999996" contentMode="left" ambiguous="YES" placeholderIntrinsicWidth="212" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D8f-Iz-hTC">
+                                                <rect key="frame" x="-2" y="21" width="216" height="31"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <connections>
+                                                    <action selector="SliderPosChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CZS-7L-fA1"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOL-q3-25G">
+                                        <rect key="frame" x="225" y="19" width="67" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="Close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeZ-pA-4H8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="4" y="38" width="39" height="30"/>
+                                </variation>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mk-EW-gCn">
+                                <rect key="frame" x="0.0" y="100" width="600" height="313"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Hello my name is Geran and this is my app. This app is all about me. to countinue either click on the Games button to just see the games in this app or the Full Tour button to get the Full Tour of the app</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="CloseMenu" destination="oOL-q3-25G" id="UnL-Ke-Kix"/>
+                        <outlet property="DarkthemeLabel" destination="A9R-fg-ceB" id="5j3-8Q-R24"/>
+                        <outlet property="Menu" destination="f4p-bk-kSw" id="2CH-EJ-Bu5"/>
+                        <outlet property="OpenMenu" destination="rUj-2s-Wb8" id="03m-lj-CVw"/>
+                        <outlet property="Screen" destination="8bC-Xf-vdC" id="k3I-zb-prf"/>
+                        <outlet property="ThemeSlider" destination="D8f-Iz-hTC" id="nOE-6F-eho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="-47"/>
+        </scene>
+    </scenes>
+</document>
