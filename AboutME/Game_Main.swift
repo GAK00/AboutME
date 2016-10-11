@@ -10,24 +10,25 @@ import UIKit
 //private var mainColor
 //private var invertedColor
 class Game_Main: UIViewController{
+    
     @IBOutlet weak var ThemeSlider: UISlider!
     @IBOutlet var Screen: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        ColorHolder()
+        ColorHandler()
         
         
     }
-    func ColorHander (){
+    func ColorHandler (){
         let darkness: CGFloat = CGFloat(ThemeSlider.value)
         let testMain :UIColor = ColorHolder.getColor()
         let mainColor : UIColor
-        if(testMain != UIColor.brownColor()){mainColor = testMain}
+       if(testMain != UIColor.brownColor()){mainColor = testMain}
         else{mainColor = UIColor(white:darkness,alpha: 1)}
         var invertedColor = UIColor(white:1-darkness,alpha: 1)
         if(invertedColor == mainColor){
-            invertedColor = UIColor.blackColor()}
-        Screen.backgroundColor = mainColor
+          invertedColor = UIColor.blackColor()}
+       Screen.backgroundColor = mainColor
        
     }
 

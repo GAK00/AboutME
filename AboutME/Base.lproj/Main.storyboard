@@ -32,9 +32,6 @@
                                             <slider opaque="NO" alpha="0.94999998807907104" contentMode="left" ambiguous="YES" placeholderIntrinsicWidth="212" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pB6-sd-1rX">
                                                 <rect key="frame" x="-2" y="21" width="216" height="31"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                                <connections>
-                                                    <action selector="SliderPosChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dby-CP-5D9"/>
-                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -44,9 +41,6 @@
                                         <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
                                         </variation>
-                                        <connections>
-                                            <action selector="Close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7um-5A-TgU"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,9 +53,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="Screen" destination="jhM-AQ-tvV" id="2Pm-hj-8lW"/>
-                        <outlet property="ThemeSLider" destination="pB6-sd-1rX" id="UmH-UH-NDg"/>
-                        <outlet property="ThemeSlider" destination="pB6-sd-1rX" id="bZ0-G9-hk5"/>
+                        <outlet property="Screen" destination="jhM-AQ-tvV" id="nvf-g0-DJi"/>
+                        <outlet property="ThemeSlider" destination="pB6-sd-1rX" id="6bb-Ph-B3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9H-P8-xZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,10 +132,10 @@
                                 <rect key="frame" x="306" y="242" width="69" height="30"/>
                                 <state key="normal" title="Games"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="311" y="170" width="69" height="30"/>
+                                    <rect key="frame" x="237" y="170" width="69" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="zeL-2m-beP" kind="show" identifier="MainToGame_Main" id="b5G-Th-V6u"/>
+                                    <segue destination="zeL-2m-beP" kind="show" id="Kg3-1a-faC"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" fixedFrame="YES" pagingEnabled="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mk-EW-gCn">
@@ -152,7 +145,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="92" width="160" height="189"/>
+                                    <rect key="frame" x="70" y="105" width="160" height="57"/>
                                 </variation>
                             </textView>
                         </subviews>
