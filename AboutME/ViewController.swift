@@ -21,6 +21,7 @@ public class ViewController: UIViewController {
     @IBOutlet weak var mainText: UITextView!
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
+   
     override public func viewDidLoad() {
         super.viewDidLoad()
         mainText.frame.size.height = 50
@@ -30,7 +31,7 @@ public class ViewController: UIViewController {
         FullTourButton.frame.origin = CGPoint(x: screenSize.width * 0.1, y: screenSize.height * 0.6)
     
         
-        ColorHander()
+        LoadColorHandler()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -57,10 +58,7 @@ public class ViewController: UIViewController {
     }
     func ColorHander (){
         let darkness: CGFloat = CGFloat(ThemeSlider.value)
-        let testMain :UIColor = ColorHolder.getColor()
-        let mainColor : UIColor
-        if(testMain != UIColor.brownColor()){mainColor = testMain}
-        else{mainColor = UIColor(white:darkness,alpha: 1)}
+        let mainColor : UIColor = UIColor(white:darkness,alpha: 1)
         var invertedColor = UIColor(white:1-darkness,alpha: 1)
         if(invertedColor == mainColor){
            invertedColor = UIColor.blackColor()}
@@ -71,6 +69,32 @@ public class ViewController: UIViewController {
         ButtonColor(FullTourButton,mainColor: mainColor,invertedColor: invertedColor)
         ButtonColor(GamesButton, mainColor: mainColor, invertedColor: invertedColor)
         ColorHolder.setColor(mainColor)
+        ColorHolder.setInvColor(invertedColor)
+    }
+    func LoadColorHandler (){
+        let darkness: CGFloat = CGFloat(ThemeSlider.value)
+        let testMain :UIColor = ColorHolder.getColor()
+        let testInverted :UIColor = ColorHolder.getInvColor()
+        let mainColor : UIColor
+        var iColor : UIColor
+        if(testMain != UIColor.brownColor()){mainColor = testMain}
+        else{mainColor = UIColor(white:darkness,alpha: 1)}
+        if(testInverted != UIColor.brownColor()){
+            iColor = testInverted}
+        else{
+            iColor = UIColor(white:1-darkness,alpha: 1)}
+        if(iColor == mainColor){
+            iColor = UIColor.blackColor()}
+        ColorHolder.setColor(mainColor)
+        ColorHolder.setInvColor(iColor)
+        Screen.backgroundColor = mainColor
+        LabelColor(DarkthemeLabel, mainColor: mainColor, invertedColor: iColor)
+        ButtonColor(CloseMenu, mainColor: mainColor, invertedColor: iColor)
+        ButtonColor(OpenMenu, mainColor: mainColor, invertedColor: iColor)
+        ButtonColor(FullTourButton,mainColor: mainColor,invertedColor: iColor)
+        ButtonColor(GamesButton, mainColor: mainColor, invertedColor: iColor)
+        Screen.backgroundColor = mainColor
+        
     }
     func ButtonColor(button: UIButton,mainColor: UIColor,invertedColor:UIColor){
         button.backgroundColor = invertedColor
@@ -82,5 +106,5 @@ public class ViewController: UIViewController {
         label.backgroundColor = invertedColor
         label.textColor = mainColor
     }
-    }
+      }
 

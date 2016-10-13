@@ -9,12 +9,20 @@
 import UIKit
 public class ColorHolder{
     public static var Color: UIColor = UIColor.brownColor()
+    public static var InvColor: UIColor = UIColor.brownColor()
     public static func setColor(mainColor: UIColor){
         Color = mainColor
     }
+    public static func setInvColor(Invcolor: UIColor){
+        InvColor = Invcolor
+    }
+
     
     public static func getColor()->UIColor{
     return Color
+    }
+    public static func getInvColor()->UIColor{
+        return InvColor
     }
     
 }
