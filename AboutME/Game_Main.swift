@@ -18,6 +18,8 @@ public class Game_Main: UIViewController{
     @IBOutlet weak var CloseMenu: UIButton!
     @IBOutlet weak var OpenMenu: UIButton!
     @IBOutlet weak var Home: UIButton!
+    @IBOutlet weak var DrawingButton: UIButton!
+    @IBOutlet weak var RpsButton: UIButton!
     var lastPoint: CGPoint!
     var linecolor: UIColor!
     override public func viewDidLoad() {
@@ -47,6 +49,8 @@ public class Game_Main: UIViewController{
         ButtonColor(CloseMenu, mainColor: mainColor, invertedColor: iColor)
         ButtonColor(OpenMenu, mainColor: mainColor, invertedColor: iColor)
         ButtonColor(Home,mainColor: mainColor,invertedColor: iColor)
+        ButtonColor(DrawingButton, mainColor: mainColor, invertedColor: iColor)
+         ButtonColor(RpsButton, mainColor: mainColor, invertedColor: iColor)
         ColorHolder.setColor(mainColor)
         ColorHolder.setInvColor(iColor)
     }
@@ -62,6 +66,9 @@ public class Game_Main: UIViewController{
         ButtonColor(CloseMenu, mainColor: mainColor, invertedColor: invertedColor)
         ButtonColor(OpenMenu, mainColor: mainColor, invertedColor: invertedColor)
         ButtonColor(Home,mainColor: mainColor,invertedColor: invertedColor)
+        ButtonColor(DrawingButton, mainColor: mainColor, invertedColor: invertedColor)
+        ButtonColor(RpsButton, mainColor: mainColor, invertedColor: invertedColor)
+
         ColorHolder.setColor(mainColor)
         ColorHolder.setInvColor(invertedColor)
     }
