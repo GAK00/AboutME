@@ -51,15 +51,50 @@ super.autoColor(Winner)
     }
     @IBAction func PlayerRock(sender: UIButton) {
         You.text = "You: Rock"
+        let you : Int = 1
+        doRps(you)
+        
     }
     @IBAction func PlayerPaper(sender: UIButton) {
         You.text = "You: Paper"
+        let you : Int = 2
+        doRps(you)
     }
    
     @IBAction func PlayerScissors(sender: UIButton) {
         You.text = "You: Scissors"
+        let you : Int = 3
+        doRps(you)
     }
-    func generateCpuDecision(){
+    func generateCpuDecision() -> Int
+    {
+        let hi:Int = Int(arc4random_uniform(3))+1
+        return hi
+        
+    }
+    func displayCpuDecision(decision:Int){
+        if(decision == 1){Cpu.text = "Cpu: Rock"}
+        else if(decision == 2){Cpu.text = "Cpu: Paper"}
+        else if(decision == 3){Cpu.text = "Cpu: Scissors"}
     
+    }
+    func calcWinner(var you:Int,var cpu:Int){
+        if(you == cpu){Winner.text = "Winner: Tie"}
+        else{
+            if(you==1&&cpu==3){
+            you = you+3
+            }
+            else if(cpu==1&&you==3){
+            cpu = cpu+3
+            }
+            if(you>cpu){Winner.text = "Winner: You"}
+            if(cpu > you){Winner.text = "Winner: Cpu"}
+        }
+      
+    }
+    func doRps(you:Int){
+        let cpu : Int = generateCpuDecision()
+        displayCpuDecision(cpu)
+        calcWinner(you, cpu: cpu)
     }
 }

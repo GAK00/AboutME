@@ -360,16 +360,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="213" width="42" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cpu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-l9-9dp">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="269" width="42" height="21"/>
+                                    <rect key="frame" x="122" y="205" width="119" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jr-it-BHq">
@@ -378,7 +369,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="324" width="66" height="21"/>
+                                    <rect key="frame" x="136" y="324" width="105" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfO-gy-lrl">
@@ -391,6 +382,15 @@
                                     <action selector="PlayerScissors:" destination="DSJ-sI-C8S" eventType="touchUpInside" id="c1d-qX-63y"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cpu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-l9-9dp">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="122" y="266" width="119" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -400,9 +400,9 @@
                                 <exclude reference="RbS-RU-8v1"/>
                                 <exclude reference="OBo-ad-Eqh"/>
                                 <exclude reference="GRS-8u-xoQ"/>
-                                <exclude reference="Q9H-l9-9dp"/>
                                 <exclude reference="0Jr-it-BHq"/>
                                 <exclude reference="YfO-gy-lrl"/>
+                                <exclude reference="Q9H-l9-9dp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -412,9 +412,9 @@
                                 <include reference="RbS-RU-8v1"/>
                                 <include reference="OBo-ad-Eqh"/>
                                 <include reference="GRS-8u-xoQ"/>
-                                <include reference="Q9H-l9-9dp"/>
                                 <include reference="0Jr-it-BHq"/>
                                 <include reference="YfO-gy-lrl"/>
+                                <include reference="Q9H-l9-9dp"/>
                             </mask>
                         </variation>
                     </view>
@@ -472,6 +472,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="212" height="21"/>
+                                                </variation>
                                             </label>
                                             <slider opaque="NO" alpha="0.94999998807907104" contentMode="left" ambiguous="YES" placeholderIntrinsicWidth="212" placeholderIntrinsicHeight="30" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tbJ-kX-EQS">
                                                 <rect key="frame" x="-2" y="21" width="216" height="31"/>
@@ -482,6 +485,9 @@
                                                 </connections>
                                             </slider>
                                         </subviews>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="8" y="8" width="212" height="51"/>
+                                        </variation>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-44-69z">
                                         <rect key="frame" x="225" y="19" width="39" height="30"/>
